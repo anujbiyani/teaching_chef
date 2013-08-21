@@ -145,7 +145,11 @@
         
         <ul>
         <li>Gems like <a href="https://github.com/applicationsonline/librarian-chef">Librarian-Chef</a> and <a href="https://github.com/RiotGames/berkshelf">Berkshelf</a> (both are like Bundler) are useful for managing cookbooks</li>
-        <li>BDD it using <a href="https://github.com/Atalanta/cucumber-chef/">Cucumber-Chef</a></li>
+        <li>BDD it using <a href="https://github.com/Atalanta/cucumber-chef/">Cucumber-Chef</a>
+        
+        <ul>
+        <li>Runs code against an actual server (EC2 or Vagrant)</li>
+        </ul></li>
         </ul></li>
         </ol>
       </div>
@@ -182,6 +186,73 @@
         </ul></li>
         </ul></li>
         </ol>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Anatomy of a Chef Repo</h1>
+        
+        <ul>
+        <li>chef-repo/
+        
+        <ul>
+        <li>config/
+        
+        <ul>
+        <li>rake.rb</li>
+        </ul></li>
+        <li>cookbooks/</li>
+        <li>data_bags/</li>
+        <li>environments/</li>
+        <li>roles/</li>
+        <li>Rakefile</li>
+        <li>chefignore</li>
+        <li>README.md</li>
+        </ul></li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Anatomy of a Chef Repo</h1>
+        
+        <p>My additions:</p>
+        
+        <ul>
+        <li>chef-repo/
+        
+        <ul>
+        <li>...</li>
+        <li>features/
+        
+        <ul>
+        <li>step_definitions/</li>
+        <li>support/
+        
+        <ul>
+        <li>environments/
+        
+        <ul>
+        <li>test.rb</li>
+        </ul></li>
+        <li>env.rb</li>
+        </ul></li>
+        </ul></li>
+        <li>lib/
+        
+        <ul>
+        <li>tasks/</li>
+        </ul></li>
+        <li>Cheffile</li>
+        <li>Cheffile.lock</li>
+        <li>Gemfile</li>
+        <li>Gemfile.lock</li>
+        </ul></li>
+        </ul>
       </div>
       <div class='spacer bottom'></div>
     </section>

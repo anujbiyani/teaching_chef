@@ -65,6 +65,7 @@ Basically two components: the Chef Repo and Cookbooks
 5. Use it in your chef-repo
   * Gems like [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) and [Berkshelf](https://github.com/RiotGames/berkshelf) (both are like Bundler) are useful for managing cookbooks
   * BDD it using [Cucumber-Chef](https://github.com/Atalanta/cucumber-chef/)
+      * Runs code against an actual server (EC2 or Vagrant)
 
 !SLIDE left
 
@@ -82,3 +83,38 @@ Basically two components: the Chef Repo and Cookbooks
         * useful switches:
           * `-i /path/to/chef.pem`
           * `-x root` run as root user (default is ubuntu)
+
+!SLIDE left
+
+# Anatomy of a Chef Repo
+
+* chef-repo/
+  * config/
+      * rake.rb
+  * cookbooks/
+  * data_bags/
+  * environments/
+  * roles/
+  * Rakefile
+  * chefignore
+  * README.md
+
+!SLIDE left
+
+# Anatomy of a Chef Repo
+
+My additions:
+* chef-repo/
+  * ...
+  * features/
+      * step_definitions/
+      * support/
+          * environments/
+              * test.rb
+          * env.rb
+  * lib/
+      * tasks/
+  * Cheffile
+  * Cheffile.lock
+  * Gemfile
+  * Gemfile.lock

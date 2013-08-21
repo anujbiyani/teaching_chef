@@ -1,3 +1,7 @@
 body .content h1 {
   margin: 0 auto;
 }
+
+.deck-container ul ul, .deck-container ul ul ul {
+  margin-bottom: 0px;
+}
