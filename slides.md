@@ -1,27 +1,37 @@
-# .
+# Teaching Chef
 
 !SLIDE
 
-# A Title Slide
+# Chef
 
-## me@example.com
+## abiyani@lytro.com
 
-!SLIDE
+!SLIDE left
 
-# Some sample code
+# The Framework
 
-``` ruby
-def method
-  puts "Hello, World"
-end
-```
+### Chef vs Chef-Solo
+* Chef-Solo runs on the local machine and requires dependencies to be on that machine
+* Chef has a server and nodes
+  * the server contains dependencies and instructions
+  * the node communicates with the server to configure itself
 
-!NOTES
+I don't know much about Chef-Solo.
 
- * a note
+!SLIDE left
 
-!SLIDE
+# The Framework
 
-# With a Background Image
+### Chef Server
+* stores data needed for the chef run (more on this later)
+* has a web UI
+* indexes data about nodes for searching
 
-}}} images/test.png
+### Two options:
+#### Hosted Chef
+* pay OpsWorks to provide the Chef server
+* support
+
+#### Open Source Chef
+* build your own server
+* no support, but also no boundaries
