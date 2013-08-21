@@ -118,3 +118,37 @@ My additions:
   * Cheffile.lock
   * Gemfile
   * Gemfile.lock
+
+!SLIDE left
+
+# Anatomy of a Chef Cookbook
+
+* my_cookbook/
+  * attributes/
+      * default.rb
+  * definitions/
+  * files/
+      * default/
+  * libraries/
+  * providers/
+  * recipes/
+      * default.rb
+  * resources/
+  * templates/
+  * metadata.rb
+  * README.md
+
+!SLIDE left
+
+# Anatomy of a Chef Cookbook
+
+My additions:
+* my_cookbook/
+  * ...
+  * spec/
+      * spec_helper.rb
+      * default_spec.rb
+  * Cheffile
+  * Cheffile.lock
+  * Gemfile
+  * Gemfile.lock
