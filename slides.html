@@ -85,6 +85,106 @@
       </div>
       <div class='spacer bottom'></div>
     </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>The Guts</h1>
+        
+        <p>Basically two components: the Chef Repo and Cookbooks</p>
+        
+        <h3>Chef Repo</h3>
+        
+        <ul>
+        <li>analogous to a rails app; it&#39;s the driver of your infrastructure
+        
+        <ul>
+        <li>knife gem for operating on the chef server</li>
+        <li>cucumber-chef gem for BDD</li>
+        </ul></li>
+        </ul>
+        
+        <h3>Cookbooks</h3>
+        
+        <ul>
+        <li>analogous to a gem, but more integral
+        
+        <ul>
+        <li>contains the code necessary to accomplish some specific goal (e.g. install monit, or update the apt-cache)</li>
+        </ul></li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Initial setup</h1>
+        
+        <ol>
+        <li>Init the chef-repo
+        
+        <ul>
+        <li><a href="https://github.com/opscode/chef-repo">https://github.com/opscode/chef-repo</a></li>
+        </ul></li>
+        <li>Set up the chef server
+        
+        <ul>
+        <li><a href="http://docs.opscode.com/install_server.html">http://docs.opscode.com/install_server.html</a></li>
+        </ul></li>
+        <li>Connect your chef repository to the server
+        
+        <ul>
+        <li><a href="http://docs.opscode.com/chef/install_workstation.html">http://docs.opscode.com/chef/install_workstation.html</a></li>
+        </ul></li>
+        <li>Make your first cookbook
+        
+        <ul>
+        <li>TDD it using <a href="https://github.com/acrmp/chefspec/">ChefSpec</a></li>
+        </ul></li>
+        <li>Use it in your chef-repo
+        
+        <ul>
+        <li>Gems like <a href="https://github.com/applicationsonline/librarian-chef">Librarian-Chef</a> and <a href="https://github.com/RiotGames/berkshelf">Berkshelf</a> (both are like Bundler) are useful for managing cookbooks</li>
+        <li>BDD it using <a href="https://github.com/Atalanta/cucumber-chef/">Cucumber-Chef</a></li>
+        </ul></li>
+        </ol>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='left slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Initial setup - continued</h1>
+        
+        <ol>
+        <li>Run it on a node
+        
+        <ul>
+        <li>Use <a href="https://github.com/opscode/knife-ec2">Knife-EC2</a> to launch nodes</li>
+        <li>Run the chef-client. Two options:</li>
+        <li>ssh onto the target machine
+        
+        <ul>
+        <li><code>chef-repo $ knife node show NODE_NAME</code></li>
+        <li><code>chef-repo $ ssh user@ip</code></li>
+        <li><code>chef-node $ chef-client</code></li>
+        </ul></li>
+        <li>use <code>knife ssh</code>
+        
+        <ul>
+        <li><code>bundle exec knife ssh &#39;name:NODE_NAME&#39; &#39;chef-client&#39;</code></li>
+        <li>useful switches:
+        
+        <ul>
+        <li><code>-i /path/to/chef.pem</code></li>
+        <li><code>-x root</code> run as root user (default is ubuntu)</li>
+        </ul></li>
+        </ul></li>
+        </ul></li>
+        </ol>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
     <!-- deck.js navigation extension -->
     <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
     <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
